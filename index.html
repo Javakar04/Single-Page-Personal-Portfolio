@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javakar S — Cyber-Architect & Full-Stack AI Engineer</title>
+  <meta name="description" content="Portfolio of Javakar S — Full-Stack Developer (MERN Stack, Java, Python) & AI/Data Science Student. 2x SIH Shortlisted, Published Book Author, Commercial Client Project Delivery." />
+  <meta name="keywords" content="Javakar S, Software Engineer, Full-Stack Developer, AI Data Science, MERN Stack, Smart India Hackathon, Coimbatore, Portfolio" />
+  <meta name="author" content="Javakar S" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Javakar S — Full-Stack Developer & AI/DS Engineer" />
+  <meta property="og:description" content="Explore real-world client systems, SIH hackathons, published AI research, and interactive computer vision demos." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><path d='M35 28 h30 v12 h-18 v28 c0 9 -5 14 -14 14 h-6 v-11 h4 c3 0 4 -2 4 -5 z' fill='%23ffffff'/><circle cx='70' cy='68' r='8' fill='%2306b6d4'/></svg>" />
+
+  <!-- Fonts: Plus Jakarta Sans, Syne for high-fashion futuristic headings, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <!-- Interactive Neural Constellation Background Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Ambient Lighting Glows -->
+  <div class="ambient-glows">
+    <div class="glow-spot spot-primary"></div>
+    <div class="glow-spot spot-secondary"></div>
+    <div class="glow-spot spot-accent"></div>
+  </div>
+
+  <!-- Sound Audio FX Indicator Pill -->
+  <div class="hud-sound-pill" id="sound-toggle" title="Toggle audio feedback">
+    <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+    <span class="hud-sound-text">AUDIO: <strong id="sound-status">ON</strong></span>
+  </div>
+
+  <!-- KEYBOARD HUD HINT -->
+  <div class="keyboard-hud-hint">
+    <span>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> for Command Palette &bull; <kbd>~</kbd> for Terminal</span>
+  </div>
+
+  <!-- ================= HEADER NAVIGATION ================= -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Javakar S">
+        <span class="logo-chip">JS</span>
+        <span class="logo-text">javakar<span class="logo-accent">.ai</span></span>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero" class="nav__link active-link"><span>01.</span> Home</a></li>
+          <li class="nav__item"><a href="#bento" class="nav__link"><span>02.</span> Architecture</a></li>
+          <li class="nav__item"><a href="#research" class="nav__link"><span>03.</span> Research</a></li>
+          <li class="nav__item"><a href="#hackathons" class="nav__link"><span>04.</span> Hackathons</a></li>
+          <li class="nav__item"><a href="#capabilities" class="nav__link"><span>05.</span> Capabilities</a></li>
+          <li class="nav__item"><a href="#journey" class="nav__link"><span>06.</span> Journey</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link"><span>07.</span> Contact</a></li>
+        </ul>
+        <button class="nav__close" id="nav-close" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header__actions">
+        <!-- Command Palette Trigger Button -->
+        <button class="action-btn cmd-btn" id="cmd-trigger" aria-label="Open Command Palette (Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-shortcut"><kbd>⌘K</kbd></span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="action-btn theme-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon icon-moon"></i>
+          <i class="fa-solid fa-sun icon-sun"></i>
+        </button>
+
+        <!-- CTA Direct Contact -->
+        <a href="#contact" class="btn btn--cyber nav__contact-btn">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="nav-toggle" aria-label="Open Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero section" id="hero">
+      <div class="container hero__grid">
+        <!-- Hero Left Column: Narrative & Identity -->
+        <div class="hero__intro">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">AVAILABLE FOR SDE INTERNSHIPS &amp; FULL-STACK ROLES</span>
+          </div>
+
+          <h1 class="hero__headline">
+            Architecting <br />
+            <span class="text-gradient">Intelligent Systems</span> <br />
+            &amp; Real-World Web.
+          </h1>
+
+          <div class="hero__identity">
+            <span class="identity-name">JAVAKAR S</span>
+            <span class="identity-separator">//</span>
+            <span class="identity-role" id="typewriter">Full-Stack Developer</span>
+            <span class="cursor">_</span>
+          </div>
+
+          <p class="hero__lead">
+            Computer Science student specializing in <strong>AI &amp; Data Science</strong> at KPR College of Arts, Science and Research. Creator of end-to-end commercial client systems, <strong>2x Smart India Hackathon shortlisted engineer</strong>, and author of published research on <em>Defensive AI vs Cybercrime</em>.
+          </p>
+
+          <!-- Core Action Cluster -->
+          <div class="hero__cta-group">
+            <a href="#bento" class="btn btn--glitch">
+              <span class="btn__text">EXPLORE WORK</span>
+              <span class="btn__icon"><i class="fa-solid fa-arrow-down-long"></i></span>
+            </a>
+            <button class="btn btn--terminal" id="launch-cli-btn">
+              <i class="fa-solid fa-terminal"></i>
+              <span>LAUNCH LIVE CLI</span>
+            </button>
+            <a href="mailto:javakar00@gmail.com" class="btn btn--ghost">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>HIRE ME</span>
+            </a>
+          </div>
+
+          <!-- Social Matrix & Quick Telemetry -->
+          <div class="hero__telemetry">
+            <div class="telemetry-item">
+              <span class="telemetry-label">LOCATION</span>
+              <span class="telemetry-val">Coimbatore, India</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">EDUCATION</span>
+              <span class="telemetry-val">B.Sc AI &amp; DS (7.2 CGPA)</span>
+            </div>
+            <div class="telemetry-socials">
+              <a href="https://linkedin.com/in/javakar-s-51949038b" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://leetcode.com/u/Javakar_S" target="_blank" rel="noopener noreferrer" class="social-chip" title="LeetCode Profile">
+                <i class="fa-solid fa-code"></i>
+              </a>
+              <a href="https://hackerrank.com/profile/javakar_28k24" target="_blank" rel="noopener noreferrer" class="social-chip" title="HackerRank Profile">
+                <i class="fa-brands fa-hackerrank"></i>
+              </a>
+              <a href="mailto:javakar00@gmail.com" class="social-chip" title="Direct Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:8122673732" class="social-chip" title="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Cyber Terminal -->
+        <div class="hero__terminal-wrapper">
+          <div class="cyber-window">
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="ctrl-dot dot-close"></span>
+                <span class="ctrl-dot dot-min"></span>
+                <span class="ctrl-dot dot-max"></span>
+              </div>
+              <div class="window-title">
+                <i class="fa-solid fa-microchip"></i> javakar@system-v2.6:~ (interactive shell)
+              </div>
+              <div class="window-badge">ONLINE</div>
+            </div>
+
+            <div class="terminal-body" id="hero-terminal-screen">
+              <div class="term-line welcome-line">
+                <span class="term-prompt">sys &gt;</span>
+                <span class="term-text">System initialized. Type <strong class="hl-cmd">'help'</strong> to list commands or click prompt chips below.</span>
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">user &gt;</span>
+                <span class="term-text hl-cyan">whoami</span>
+              </div>
+              <div class="term-output">
+                &bull; <strong>Javakar S</strong> &bull; AI &amp; Data Science Student &bull; Full-Stack MERN Dev &bull; 2x SIH Finalist
+              </div>
+
+              <!-- Live dynamic log output container -->
+              <div id="term-dynamic-output"></div>
+
+              <!-- Interactive prompt input -->
+              <div class="term-input-row">
+                <span class="term-prompt">visitor@javakar:~$</span>
+                <input type="text" id="terminal-inline-input" class="term-inline-input" placeholder="try 'projects', 'skills', 'sih', 'book'..." autocomplete="off" spellcheck="false" />
+              </div>
+            </div>
+
+            <!-- Quick Terminal Command Chips -->
+            <div class="window-footer">
+              <span class="chip-label">QUICK CMDS:</span>
+              <div class="cmd-chips">
+                <button class="cmd-chip" data-cmd="skills">skills</button>
+                <button class="cmd-chip" data-cmd="projects">projects</button>
+                <button class="cmd-chip" data-cmd="sih">sih</button>
+                <button class="cmd-chip" data-cmd="book">book</button>
+                <button class="cmd-chip" data-cmd="contact">contact</button>
+                <button class="cmd-chip" data-cmd="matrix">matrix</button>
+                <button class="cmd-chip" data-cmd="clear">clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Metric Strip -->
+      <div class="container hero__metrics-strip">
+        <div class="metric-block" data-spotlight>
+          <div class="metric-top">
+            <span class="metric-counter" data-target="2">0</span>
+            <span class="metric-unit">x</span>
+          </div>
+          <span class="metric-title">Smart India Hackathon</span>
+          <span class="metric-desc">Shortlisted in SIH 2024 &amp; 2025</span>
+        </div>
+
+        <div class="metric-block" data-spotlight>
+          <div class="metric-top">
+            <span class="metric-counter" data-target="1">0</span>
+            <span class="metric-unit">Client System</span>
+          </div>
+          <span class="metric-title">New Standard Electrical</span>
+          <span class="metric-desc">Delivered End-to-End Solution</span>
+        </div>
+
+        <div class="metric-block" data-spotlight>
+          <div class="metric-top">
+            <span class="metric-counter" data-target="1">0</span>
+            <span class="metric-unit">Book Chapter</span>
+          </div>
+          <span class="metric-title">Published Researcher</span>
+          <span class="metric-desc">AI vs Cybercrime (Data Science)</span>
+        </div>
+
+        <div class="metric-block" data-spotlight>
+          <div class="metric-top">
+            <span class="metric-counter" data-target="50">0</span>
+            <span class="metric-unit">+</span>
+          </div>
+          <span class="metric-title">Algorithmic Problems</span>
+          <span class="metric-desc">HackerRank Java &amp; LeetCode Streak</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENTO GRID PROJECTS ================= -->
+    <section class="section bento-section" id="bento">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">02</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">ENGINEERED ARCHITECTURE</span>
+        </div>
+        <div class="section-heading-cluster">
+          <h2 class="section-headline">Featured Works &amp; Real-World Systems</h2>
+          <p class="section-lead">A showcase of production software, client consultancy, computer vision prototypes, and distributed application logic.</p>
+        </div>
+
+        <!-- Asymmetric Bento Grid -->
+        <div class="bento-grid">
+          <!-- BENTO 1: Client Consultancy (Featured Large Card) -->
+          <div class="bento-card bento-card--large client-card" data-spotlight>
+            <div class="card-glow-bg"></div>
+            <div class="bento-header">
+              <div class="bento-pill pill-gold">
+                <i class="fa-solid fa-certificate"></i> COMMERCIAL ENGAGEMENT
+              </div>
+              <span class="bento-meta">COMPLETED &amp; DELIVERED</span>
+            </div>
+
+            <div class="bento-body">
+              <h3 class="bento-title">New Standard Electrical Works</h3>
+              <p class="bento-subtitle">End-to-End Client Software Engineering &amp; Business Digitalization</p>
+
+              <p class="bento-text">
+                Engaged in a complete commercial client project for <strong>New Standard Electrical Works</strong>. Directly gathered client operational challenges, engineered a robust business workflow management software, streamlined customer and service records, and delivered a production solution aligned with commercial requirements.
+              </p>
+
+              <div class="bento-specs">
+                <div class="spec-item">
+                  <span class="spec-label">CLIENT</span>
+                  <span class="spec-val">New Standard Electrical Works</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">ROLE</span>
+                  <span class="spec-val">Lead Consultant &amp; Developer</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">DELIVERABLE</span>
+                  <span class="spec-val">Full-Stack Management System</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">IMPACT</span>
+                  <span class="spec-val">100% Client Satisfaction</span>
+                </div>
+              </div>
+
+              <div class="tech-stack-row">
+                <span class="tech-tag">Requirements Engineering</span>
+                <span class="tech-tag">Full-Stack Solution</span>
+                <span class="tech-tag">Workflow Automation</span>
+                <span class="tech-tag">CRUD Architecture</span>
+                <span class="tech-tag">Client Delivery</span>
+              </div>
+            </div>
+
+            <div class="bento-footer">
+              <span class="client-seal">
+                <i class="fa-solid fa-shield-check"></i> Verified Commercial Client Project
+              </span>
+            </div>
+          </div>
+
+          <!-- BENTO 2: Hand Gesture Control System (With Interactive Live CV Lab Canvas!) -->
+          <div class="bento-card cv-card" data-spotlight>
+            <div class="bento-header">
+              <div class="bento-pill pill-purple">
+                <i class="fa-solid fa-eye"></i> COMPUTER VISION &amp; AI
+              </div>
+              <span class="bento-meta">Python &bull; OpenCV &bull; MediaPipe</span>
+            </div>
+
+            <div class="bento-body">
+              <h3 class="bento-title">Hand Gesture Control System</h3>
+              <p class="bento-text">
+                Touch-free human-computer interaction system tracking 21 3D hand landmarks via live webcam feeds for air-canvas drawing, virtual erasing, and screen scrolling.
+              </p>
+
+              <!-- LIVE INTERACTIVE MINI-LAB SIMULATOR -->
+              <div class="interactive-cv-lab">
+                <div class="lab-toolbar">
+                  <span class="lab-title"><i class="fa-solid fa-gamepad"></i> INTERACTIVE AIR-CANVAS SIMULATOR:</span>
+                  <div class="lab-modes">
+                    <button class="lab-btn active" id="lab-draw-mode" title="Air Draw"><i class="fa-solid fa-pencil"></i> Draw</button>
+                    <button class="lab-btn" id="lab-erase-mode" title="Gesture Erase"><i class="fa-solid fa-eraser"></i> Erase</button>
+                    <button class="lab-btn" id="lab-clear-canvas" title="Reset Canvas"><i class="fa-solid fa-rotate-right"></i></button>
+                  </div>
+                </div>
+                <div class="canvas-container">
+                  <canvas id="gesture-sim-canvas" width="340" height="150"></canvas>
+                  <div class="canvas-hud-overlay">
+                    <span id="gesture-hud-text">TRACKING: Move cursor inside box to simulate Hand Gestures</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-stack-row">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">MediaPipe</span>
+                <span class="tech-tag">Landmark Tracking</span>
+              </div>
+            </div>
+
+            <div class="bento-footer">
+              <a href="https://github.com/javakar-s" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span>View Architecture &amp; Code</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- BENTO 3: College Bus Management System -->
+          <div class="bento-card mern-card" data-spotlight>
+            <div class="bento-header">
+              <div class="bento-pill pill-cyan">
+                <i class="fa-brands fa-react"></i> MERN STACK
+              </div>
+              <span class="bento-meta">Production System</span>
+            </div>
+
+            <div class="bento-body">
+              <h3 class="bento-title">College Bus Management System</h3>
+              <p class="bento-text">
+                End-to-end transportation management application for college campuses. Implemented clean CRUD operations in MongoDB for real-time bus tracking, route planning, driver assignments, and student passenger management.
+              </p>
+
+              <div class="arch-flow">
+                <div class="flow-node"><span>React UI</span></div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node"><span>Express / Node API</span></div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node"><span>MongoDB CRUD</span></div>
+              </div>
+
+              <div class="tech-stack-row">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+            </div>
+
+            <div class="bento-footer">
+              <a href="https://github.com/javakar-s" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span>Explore Codebase</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- BENTO 4: Saiket Systems Internship Sprint -->
+          <div class="bento-card exp-card" data-spotlight>
+            <div class="bento-header">
+              <div class="bento-pill pill-emerald">
+                <i class="fa-solid fa-building"></i> INDUSTRY ACCELERATION
+              </div>
+              <span class="bento-meta">21 Days Intensive</span>
+            </div>
+
+            <div class="bento-body">
+              <h3 class="bento-title">Software Development Intern</h3>
+              <p class="bento-company">Saiket Systems</p>
+
+              <p class="bento-text">
+                Accelerated immersion into commercial software life cycle, micro-task execution, version-controlled git branching, and full-stack software development workflows in an agile team setup.
+              </p>
+
+              <div class="tech-stack-row">
+                <span class="tech-tag">Git / GitHub</span>
+                <span class="tech-tag">Full-Stack Sprints</span>
+                <span class="tech-tag">Agile Workflows</span>
+                <span class="tech-tag">Team Collaboration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENTO 5: Responsive Personal Portfolio Architecture -->
+          <div class="bento-card web-card" data-spotlight>
+            <div class="bento-header">
+              <div class="bento-pill pill-blue">
+                <i class="fa-solid fa-code"></i> WEB CRAFT
+              </div>
+              <span class="bento-meta">Custom Engineering</span>
+            </div>
+
+            <div class="bento-body">
+              <h3 class="bento-title">Cyber-Modern Portfolio System</h3>
+              <p class="bento-text">
+                Zero-framework bespoke architecture built with semantic HTML5, high-craft CSS3 custom properties, dynamic Web Audio synthesizers, and real-time canvas physics.
+              </p>
+
+              <div class="tech-stack-row">
+                <span class="tech-tag">Vanilla JS</span>
+                <span class="tech-tag">Canvas Physics</span>
+                <span class="tech-tag">Web Audio API</span>
+                <span class="tech-tag">Responsive UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PUBLISHED RESEARCH SPOTLIGHT ================= -->
+    <section class="section research-section" id="research">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">03</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">ACADEMIC RESEARCH &amp; AUTHORSHIP</span>
+        </div>
+
+        <div class="research-banner" data-spotlight>
+          <div class="research-badge-strip">
+            <span class="pub-type"><i class="fa-solid fa-book-bookmark"></i> PUBLISHED BOOK CHAPTER</span>
+            <span class="pub-field">Data Science in Cyber Security</span>
+          </div>
+
+          <div class="research-content-grid">
+            <div class="research-details">
+              <h2 class="research-title">"Battle for Digital: AI vs Cybercrime – The Safety"</h2>
+              <div class="research-meta">
+                <span><i class="fa-solid fa-feather"></i> Author: <strong>Javakar S</strong></span>
+                <span><i class="fa-solid fa-book"></i> Book: <em>Data Science in Cyber Security</em></span>
+                <span><i class="fa-solid fa-shield-halved"></i> Domain: AI Defense &amp; Cyber Threat Mitigation</span>
+              </div>
+
+              <p class="research-summary">
+                Authored an authoritative chapter exploring the duel between automated adversarial cyber threats and proactive Artificial Intelligence defense networks. Analyzed machine-learning threat detection models, behavioural anomaly discovery, and algorithmic safety frameworks in contemporary digital infrastructure.
+              </p>
+
+              <div class="research-highlights">
+                <div class="rh-item">
+                  <i class="fa-solid fa-check-double"></i>
+                  <span>Deep analysis of AI-augmented penetration defense</span>
+                </div>
+                <div class="rh-item">
+                  <i class="fa-solid fa-check-double"></i>
+                  <span>Predictive threat modeling with data science paradigms</span>
+                </div>
+                <div class="rh-item">
+                  <i class="fa-solid fa-check-double"></i>
+                  <span>Peer-reviewed publication contributing to cyber safety literature</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3D Book Visualization Graphic -->
+            <div class="research-book-3d">
+              <div class="book-spine-card">
+                <div class="book-cover">
+                  <div class="book-header">
+                    <span>RESEARCH MONOGRAPH</span>
+                    <i class="fa-solid fa-fingerprint"></i>
+                  </div>
+                  <h4 class="book-title-mock">Battle for Digital</h4>
+                  <p class="book-sub-mock">AI vs Cybercrime: The Safety</p>
+                  <div class="book-author-mock">By Javakar S</div>
+                  <div class="book-badge-mock">Published in Data Science in Cyber Security</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HACKATHONS & WAR ROOM ================= -->
+    <section class="section hackathons-section" id="hackathons">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">04</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">PRESSURE-TESTED EXCELLENCE</span>
+        </div>
+        <div class="section-heading-cluster">
+          <h2 class="section-headline">Hackathons &amp; Competitive Engineering</h2>
+          <p class="section-lead">Competing at national scale under non-stop deadlines, architectural constraints, and jury evaluations.</p>
+        </div>
+
+        <div class="hackathons-grid">
+          <!-- SIH 2025 -->
+          <div class="hack-card sih-card" data-spotlight>
+            <div class="hack-stamp">SHORTLISTED</div>
+            <div class="hack-header">
+              <div class="hack-year">2025</div>
+              <div class="hack-logo-badge"><i class="fa-solid fa-trophy"></i></div>
+            </div>
+            <h3 class="hack-title">Smart India Hackathon (SIH 2025)</h3>
+            <span class="hack-org">Ministry of Education &bull; AICTE</span>
+            <p class="hack-desc">
+              Shortlisted for the second consecutive year in the nation's premier technological hackathon. Built solutions tackling complex real-world problem statements under rigorous technical scrutiny.
+            </p>
+            <div class="hack-skills">
+              <span>Rapid Prototyping</span>
+              <span>Team Leadership</span>
+              <span>System Design</span>
+              <span>National Selection</span>
+            </div>
+          </div>
+
+          <!-- SIH 2024 -->
+          <div class="hack-card sih-card" data-spotlight>
+            <div class="hack-stamp">SHORTLISTED</div>
+            <div class="hack-header">
+              <div class="hack-year">2024</div>
+              <div class="hack-logo-badge"><i class="fa-solid fa-trophy"></i></div>
+            </div>
+            <h3 class="hack-title">Smart India Hackathon (SIH 2024)</h3>
+            <span class="hack-org">Ministry of Education &bull; AICTE</span>
+            <p class="hack-desc">
+              Selected in initial rounds among thousands of nationwide participants. Engineered end-to-end working software within intense timeframes with cross-functional execution.
+            </p>
+            <div class="hack-skills">
+              <span>Full-Stack Architecture</span>
+              <span>Problem Solving</span>
+              <span>Pressure Management</span>
+            </div>
+          </div>
+
+          <!-- Adobe Hackathon -->
+          <div class="hack-card adobe-card" data-spotlight>
+            <div class="hack-stamp normal">PARTICIPANT</div>
+            <div class="hack-header">
+              <div class="hack-year">COMPETITIVE</div>
+              <div class="hack-logo-badge"><i class="fa-solid fa-bolt"></i></div>
+            </div>
+            <h3 class="hack-title">Adobe Hackathon</h3>
+            <span class="hack-org">Adobe Developer Challenge</span>
+            <p class="hack-desc">
+              Engaged in high-level algorithmic, frontend, and design challenges emphasizing user experience fidelity, rapid deployment, and clean code principles.
+            </p>
+            <div class="hack-skills">
+              <span>High-Fidelity UI</span>
+              <span>Algorithmic Optimization</span>
+              <span>Creativity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAPABILITIES & ENGINEERING MATRIX ================= -->
+    <section class="section matrix-section" id="capabilities">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">05</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">SKILLS &amp; CAPABILITIES</span>
+        </div>
+        <div class="section-heading-cluster">
+          <h2 class="section-headline">Engineering Radar &amp; Competencies</h2>
+          <p class="section-lead">Concrete abilities demonstrated across production codebases, data structures, and intelligent tooling.</p>
+        </div>
+
+        <div class="capabilities-matrix">
+          <!-- Col 1: Production Web & MERN -->
+          <div class="matrix-column" data-spotlight>
+            <div class="col-head">
+              <i class="fa-brands fa-react"></i>
+              <h3>Full-Stack &amp; MERN Stack</h3>
+            </div>
+            <p class="col-summary">Engineered commercial client projects &amp; academic systems.</p>
+
+            <div class="capability-cards">
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-react"></i> React.js</span>
+                  <span class="cap-tier">Production</span>
+                </div>
+                <p class="cap-detail">State architecture, reusable hooks, responsive interactive UI flows.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-node-js"></i> Node.js &amp; Express</span>
+                  <span class="cap-tier">Production</span>
+                </div>
+                <p class="cap-detail">RESTful endpoints, middleware auth, CRUD logic, API routing.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-database"></i> MongoDB</span>
+                  <span class="cap-tier">Production</span>
+                </div>
+                <p class="cap-detail">Schema modeling, document indexing, aggregation, relational data mapping.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+                  <span class="cap-tier">Advanced</span>
+                </div>
+                <p class="cap-detail">Asynchronous promises, closures, DOM manipulation, modular architecture.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-html5"></i> HTML5 &amp; CSS3</span>
+                  <span class="cap-tier">Mastery</span>
+                </div>
+                <p class="cap-detail">Custom CSS variables, flexbox/grid layouts, responsive fluid typography.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Core Languages & Algorithmic Foundation -->
+          <div class="matrix-column" data-spotlight>
+            <div class="col-head">
+              <i class="fa-brands fa-java"></i>
+              <h3>Languages &amp; Algorithms</h3>
+            </div>
+            <p class="col-summary">Strong object-oriented fundamentals &amp; problem solving.</p>
+
+            <div class="capability-cards">
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-java"></i> Java (Core &amp; OOP)</span>
+                  <span class="cap-tier">50+ Solved</span>
+                </div>
+                <p class="cap-detail">Polymorphism, inheritance, encapsulation, collections framework on HackerRank.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-python"></i> Python</span>
+                  <span class="cap-tier">Practical</span>
+                </div>
+                <p class="cap-detail">Data manipulation, scripts, OpenCV pipelines, and computer vision scripts.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-cubes"></i> Data Structures</span>
+                  <span class="cap-tier">Core CS</span>
+                </div>
+                <p class="cap-detail">Arrays, HashMaps, Linked Lists, Trees, Stacks, Queues, and algorithmic problem solving.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-bug"></i> Debugging &amp; Diagnostics</span>
+                  <span class="cap-tier">Core CS</span>
+                </div>
+                <p class="cap-detail">Systematic stack trace analysis, memory inspection, and unit isolation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: AI, Tools & Applied Certifications -->
+          <div class="matrix-column" data-spotlight>
+            <div class="col-head">
+              <i class="fa-solid fa-microchip"></i>
+              <h3>AI, Tools &amp; Certifications</h3>
+            </div>
+            <p class="col-summary">Modern developer tooling &amp; verified certifications.</p>
+
+            <div class="capability-cards">
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-hand-sparkles"></i> OpenCV &amp; MediaPipe</span>
+                  <span class="cap-tier">Specialist</span>
+                </div>
+                <p class="cap-detail">Real-time landmark tracking, gesture recognition, webcam frame buffers.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+                  <span class="cap-tier">Workflow</span>
+                </div>
+                <p class="cap-detail">Branching strategies, PR reviews, remote sync, conflict resolution.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-certificate"></i> Verified Badges</span>
+                  <span class="cap-tier">Verified</span>
+                </div>
+                <p class="cap-detail">HackerRank Java &amp; Python, CSE Python Certification, freeCodeCamp Web Dev.</p>
+              </div>
+
+              <div class="cap-item">
+                <div class="cap-top">
+                  <span class="cap-name"><i class="fa-solid fa-fire"></i> LeetCode &amp; SoloLearn</span>
+                  <span class="cap-tier">Streak</span>
+                </div>
+                <p class="cap-detail">Active daily problem solving and programming certifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills Orbit -->
+        <div class="soft-skills-cluster" data-spotlight>
+          <div class="cluster-title">
+            <i class="fa-solid fa-brain"></i>
+            <span>COMMUNICATION, COORDINATION &amp; WORK ETHIC</span>
+          </div>
+          <div class="cluster-pills">
+            <span class="pill-item"><i class="fa-solid fa-check"></i> Direct Client Coordination</span>
+            <span class="pill-item"><i class="fa-solid fa-check"></i> High-Stress Hackathon Teamwork</span>
+            <span class="pill-item"><i class="fa-solid fa-check"></i> Self-Directed Continuous Learning</span>
+            <span class="pill-item"><i class="fa-solid fa-check"></i> End-to-End Ownership &amp; Accountability</span>
+            <span class="pill-item"><i class="fa-solid fa-check"></i> Rapid Technology Adaptability</span>
+            <span class="pill-item"><i class="fa-solid fa-check"></i> Clear Technical Communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOURNEY & ACADEMICS ================= -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">06</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">ACADEMIC FOUNDATION &amp; CLUBS</span>
+        </div>
+        <div class="section-heading-cluster">
+          <h2 class="section-headline">Education &amp; Co-Curricular Leadership</h2>
+          <p class="section-lead">Where theoretical computer science meets active campus participation.</p>
+        </div>
+
+        <div class="journey-track">
+          <!-- College -->
+          <div class="journey-node current" data-spotlight>
+            <div class="node-milestone">2024 &mdash; PRESENT</div>
+            <div class="node-content">
+              <div class="node-header">
+                <span class="node-badge">UNDERGRADUATE &bull; ACTIVE</span>
+                <span class="node-score">CGPA: <strong>7.2</strong></span>
+              </div>
+              <h3 class="node-title">B.Sc. Computer Science (AI &amp; Data Science)</h3>
+              <h4 class="node-sub">KPR College of Arts, Science and Research, Coimbatore</h4>
+              <p class="node-text">
+                Immersed in Artificial Intelligence paradigms, data science methodologies, discrete structures, and full-stack software development.
+              </p>
+              <div class="node-clubs">
+                <span class="club-chip"><i class="fa-solid fa-laptop-code"></i> Coding Club Member</span>
+                <span class="club-chip"><i class="fa-solid fa-hand-holding-heart"></i> Citizenship Club Member</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="journey-node" data-spotlight>
+            <div class="node-milestone">2024</div>
+            <div class="node-content">
+              <div class="node-header">
+                <span class="node-badge">HSC (+2) COMPLETED</span>
+                <span class="node-score">PERCENTAGE: <strong>78%</strong></span>
+              </div>
+              <h3 class="node-title">Higher Secondary Certificate (HSC)</h3>
+              <h4 class="node-sub">NV Matric Higher Secondary School, Pethappampatti</h4>
+              <p class="node-text">Solid grounding in analytical mathematics and scientific logic.</p>
+            </div>
+          </div>
+
+          <!-- Secondary -->
+          <div class="journey-node" data-spotlight>
+            <div class="node-milestone">2022</div>
+            <div class="node-content">
+              <div class="node-header">
+                <span class="node-badge">SSLC COMPLETED</span>
+                <span class="node-score">PERCENTAGE: <strong>75%</strong></span>
+              </div>
+              <h3 class="node-title">Secondary School Leaving Certificate (SSLC)</h3>
+              <h4 class="node-sub">NV Matric Higher Secondary School, Pethappampatti</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT TERMINAL ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-tag">
+          <span class="tag-number">07</span>
+          <span class="tag-line"></span>
+          <span class="tag-text">INITIATE CONTACT</span>
+        </div>
+
+        <div class="contact-terminal" data-spotlight>
+          <div class="contact-grid">
+            <div class="contact-narrative">
+              <span class="contact-kicker">AVAILABLE FOR OPPORTUNITIES</span>
+              <h2 class="contact-heading">Let's build something exceptional together.</h2>
+              <p class="contact-desc">
+                Whether you have an internship opening, a client software engineering project, or want to discuss full-stack &amp; AI architectures, my inbox is always open.
+              </p>
+
+              <div class="direct-cards">
+                <a href="mailto:javakar00@gmail.com" class="direct-card" title="Click to copy or email">
+                  <div class="dc-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="dc-info">
+                    <span class="dc-label">EMAIL ADDRESS</span>
+                    <span class="dc-val">javakar00@gmail.com</span>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="javakar00@gmail.com" aria-label="Copy Email">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </a>
+
+                <a href="tel:8122673732" class="direct-card" title="Click to call">
+                  <div class="dc-icon"><i class="fa-solid fa-phone"></i></div>
+                  <div class="dc-info">
+                    <span class="dc-label">PHONE / WHATSAPP</span>
+                    <span class="dc-val">+91 8122673732</span>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="8122673732" aria-label="Copy Phone">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </a>
+
+                <div class="direct-card">
+                  <div class="dc-icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="dc-info">
+                    <span class="dc-label">BASE LOCATION</span>
+                    <span class="dc-val">Coimbatore, Tamil Nadu, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verified External Profiles -->
+              <div class="contact-profiles">
+                <span class="cp-title">VERIFIED PROFILES:</span>
+                <div class="cp-links">
+                  <a href="https://linkedin.com/in/javakar-s-51949038b" target="_blank" rel="noopener noreferrer" class="cp-pill">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                  </a>
+                  <a href="https://leetcode.com/u/Javakar_S" target="_blank" rel="noopener noreferrer" class="cp-pill">
+                    <i class="fa-solid fa-code"></i> LeetCode
+                  </a>
+                  <a href="https://hackerrank.com/profile/javakar_28k24" target="_blank" rel="noopener noreferrer" class="cp-pill">
+                    <i class="fa-brands fa-hackerrank"></i> HackerRank
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modern Form -->
+            <div class="contact-form-panel">
+              <form id="contact-form" class="c-form">
+                <div class="form-title-row">
+                  <h3>Direct Message Dispatch</h3>
+                  <span class="form-sec-badge"><i class="fa-solid fa-lock"></i> Encrypted Direct Send</span>
+                </div>
+
+                <div class="form-row">
+                  <div class="c-field">
+                    <label for="c-name">YOUR NAME <span class="req">*</span></label>
+                    <input type="text" id="c-name" name="name" placeholder="John Doe" required />
+                  </div>
+                  <div class="c-field">
+                    <label for="c-email">EMAIL ADDRESS <span class="req">*</span></label>
+                    <input type="email" id="c-email" name="email" placeholder="john@example.com" required />
+                  </div>
+                </div>
+
+                <div class="c-field">
+                  <label for="c-subject">SUBJECT / TOPIC</label>
+                  <input type="text" id="c-subject" name="subject" placeholder="Internship Opportunity / Client Project" />
+                </div>
+
+                <div class="c-field">
+                  <label for="c-message">MESSAGE <span class="req">*</span></label>
+                  <textarea id="c-message" name="message" rows="5" placeholder="Hi Javakar, I reviewed your portfolio and would like to connect regarding..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--cyber btn--full" id="c-submit">
+                  <span>DISPATCH MESSAGE</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <div id="c-feedback" class="c-feedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <div class="footer__brand">
+        <span class="footer-logo">JAVAKAR S</span>
+        <span class="footer-tagline">Full-Stack Software Engineer &bull; AI &amp; Data Science</span>
+      </div>
+
+      <div class="footer__links">
+        <a href="#hero">Home</a>
+        <a href="#bento">Architecture</a>
+        <a href="#research">Research</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="current-year"></span> Javakar S &bull; Coimbatore, India. Engineered with HTML, CSS &amp; Vanilla JS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= COMMAND PALETTE MODAL (CTRL+K) ================= -->
+  <div class="cmd-overlay" id="cmd-overlay">
+    <div class="cmd-dialog">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-input" placeholder="Search commands, projects, skills, research, or type 'help'..." autocomplete="off" spellcheck="false" />
+        <span class="cmd-esc-hint"><kbd>ESC</kbd> to exit</span>
+      </div>
+
+      <div class="cmd-results" id="cmd-results">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popups -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
